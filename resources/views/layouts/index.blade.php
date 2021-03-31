@@ -21,7 +21,16 @@
 </head>
 <body>
     
+    @include('partials.header')
+        @yield('content')
 
+    @include('partials.footer')
+        
     <script src={{asset('js/app.js')}}></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src={{asset('vendor/jquery/jquery.min.js')}}></script>
+    <script src={{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}></script>
+
 </body>
 </html>
