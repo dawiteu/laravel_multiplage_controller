@@ -8,19 +8,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
+            <li class="nav-item px-lg-4 {{ request()->path() === '/' ? 'active' : ''}}">
                 <a class="nav-link text-uppercase text-expanded" href={{route('home')}}>Home
-                {{-- <span class="sr-only">(current)</span> --}}
                 </a>
             </li>
-            <li class="nav-item px-lg-4">
+            <li class="nav-item px-lg-4 {{ request()->path() === 'about' ? 'active' : ''}}">
                 <a class="nav-link text-uppercase text-expanded" href={{route('about')}}>About</a>
             </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href={{route('products')}}>Products</a>
+            <li class="nav-item px-lg-4 {{ request()->path() === 'products' ? 'active' : ''}}">
+                <a class="nav-link text-uppercase text-expanded " href={{route('products')}}>Products</a>
             </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>
+            <li class="nav-item px-lg-4 {{ request()->path() === 'store' ? 'active' : ''}}">
+                <a class="nav-link text-uppercase text-expanded" href={{route('store')}}>Store</a>
             </li>
             </ul>
         </div>
